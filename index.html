@@ -8,6 +8,10 @@
 
 <title>SuperDaan0608 | Roblox Developer</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -19,39 +23,42 @@
 
 
 <div class="loader">
-    <div class="loader-circle"></div>
+    <span class="loader-text">// loading_workspace<span class="blink">_</span></span>
 </div>
 
 
-<div class="cursor"></div>
-
-
-<div class="background">
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
-</div>
-
+<div class="grid-overlay"></div>
 
 
 <nav>
 
 <div class="logo">
-SuperDaan0608
+    <span class="logo-bracket">&lt;</span>SuperDaan0608<span class="logo-bracket">/&gt;</span>
 </div>
 
 
 <div class="links">
 
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<a href="#about"><span class="link-index">01</span>About</a>
+<a href="#skills"><span class="link-index">02</span>Skills</a>
+<a href="#projects"><span class="link-index">03</span>Projects</a>
+<a href="#contact"><span class="link-index">04</span>Contact</a>
 
 </div>
+
+<button class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+</button>
 
 </nav>
 
 
+<div class="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</div>
 
 
 
@@ -60,411 +67,275 @@ SuperDaan0608
 
 <div class="hero-content">
 
-
 <p class="small-title">
-ROBLOX DEVELOPER
+    <span class="status-dot"></span>
+    AVAILABLE FOR COMMISSIONS
 </p>
 
 
 <h1>
-
-Creating
-<span>professional</span>
-Roblox experiences
-
+Building
+<span class="highlight">production-grade</span>
+Roblox systems
 </h1>
 
 
 <p class="description">
-
-I build advanced Roblox systems using Luau,
-including gameplay mechanics, UI systems,
-saving systems and custom frameworks.
-
+I'm Daan — a Luau developer focused on the parts players never
+see but always feel: clean architecture, fast UI, and systems
+built to survive a live server.
 </p>
 
+
+<div class="terminal">
+    <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">init.server.luau</span>
+    </div>
+    <div class="terminal-body">
+        <p><span class="tok-kw">local</span> <span class="tok-var">Player</span> = <span class="tok-fn">game</span>:<span class="tok-fn">GetService</span>(<span class="tok-str">"Players"</span>)</p>
+        <p><span class="tok-kw">local</span> <span class="tok-var">Data</span> = <span class="tok-var">Framework</span>.<span class="tok-fn">LoadProfile</span>(<span class="tok-var">Player</span>)</p>
+        <p class="tok-comment">-- systems online. ready to ship.<span class="cursor-block"></span></p>
+    </div>
+</div>
 
 
 <div class="buttons">
 
 <button onclick="scrollProjects()">
-View Projects
+    View Projects
 </button>
 
 
 <button class="secondary" onclick="scrollContact()">
-Contact Me
+    Contact Me
 </button>
 
 </div>
 
 
 </div>
-
-
 
 
 
 <div class="model-box">
 
-
 <model-viewer
-
-src="models/avatar.glb"
-
-camera-controls
-
-auto-rotate
-
-shadow-intensity="1"
-
-exposure="1"
-
-camera-orbit="0deg 75deg 3m">
-
+    src="models/avatar.glb"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    exposure="1"
+    camera-orbit="0deg 75deg 3m">
 </model-viewer>
 
+<div class="model-tag">rbx_avatar.glb</div>
 
 </div>
 
 
 </section>
-
-
-
-
-
 
 
 
 <section id="stats" class="stats reveal">
 
-
 <div>
-
-<h2>15+</h2>
-<p>Projects Created</p>
-
+    <h2>15<span class="plus">+</span></h2>
+    <p>Projects Shipped</p>
 </div>
 
-
 <div>
-
-<h2>3+</h2>
-<p>Years Developing</p>
-
+    <h2>3<span class="plus">+</span></h2>
+    <p>Years Developing</p>
 </div>
 
-
 <div>
-
-<h2>100%</h2>
-<p>Passion</p>
-
+    <h2>100<span class="plus">%</span></h2>
+    <p>Luau, No Shortcuts</p>
 </div>
-
 
 </section>
-
-
-
-
 
 
 
 <section id="about" class="section reveal">
 
+<p class="eyebrow">// about</p>
+<h2>Who's Behind the Code</h2>
 
-<h2>
-About Me
-</h2>
-
-
-<p>
-
-Hello! I'm Daan, also known as SuperDaan0608.
-I specialize in Roblox development and creating
-high-quality systems that improve player experiences.
-
-</p>
-
+<div class="about-grid">
+    <p class="about-text">
+        Hey, I'm Daan — also known online as
+        <b>SuperDaan0608</b>. I specialize in Roblox
+        development, building high-quality systems that
+        hold up under real player load: clean data
+        pipelines, responsive interfaces, and gameplay
+        logic that doesn't fall apart at scale.
+    </p>
+    <div class="about-meta">
+        <div class="meta-row"><span>Language</span><span>Luau</span></div>
+        <div class="meta-row"><span>Focus</span><span>Systems &amp; UI</span></div>
+        <div class="meta-row"><span>Engine</span><span>Roblox Studio</span></div>
+        <div class="meta-row"><span>Status</span><span class="meta-status">Open to work</span></div>
+    </div>
+</div>
 
 </section>
-
-
-
-
-
-
 
 
 
 <section id="skills" class="section reveal">
 
-
-<h2>
-Skills
-</h2>
-
-
+<p class="eyebrow">// skills</p>
+<h2>What I Work With</h2>
 
 <div class="skills">
 
 
 <div class="skill">
-
-<div>
-<span>Luau Scripting</span>
-<span>95%</span>
+    <div>
+        <span>Luau Scripting</span>
+        <span class="skill-val">95%</span>
+    </div>
+    <div class="bar"><div style="width:95%"></div></div>
 </div>
-
-<div class="bar">
-<div style="width:95%"></div>
-</div>
-
-</div>
-
-
-
 
 
 <div class="skill">
-
-<div>
-<span>UI Development</span>
-<span>90%</span>
+    <div>
+        <span>UI Development</span>
+        <span class="skill-val">90%</span>
+    </div>
+    <div class="bar"><div style="width:90%"></div></div>
 </div>
-
-<div class="bar">
-<div style="width:90%"></div>
-</div>
-
-</div>
-
-
-
 
 
 <div class="skill">
-
-<div>
-<span>Game Systems</span>
-<span>93%</span>
+    <div>
+        <span>Game Systems</span>
+        <span class="skill-val">93%</span>
+    </div>
+    <div class="bar"><div style="width:93%"></div></div>
 </div>
-
-<div class="bar">
-<div style="width:93%"></div>
-</div>
-
-</div>
-
-
-
 
 
 <div class="skill">
-
-<div>
-<span>Optimization</span>
-<span>88%</span>
-</div>
-
-<div class="bar">
-<div style="width:88%"></div>
-</div>
-
+    <div>
+        <span>Optimization</span>
+        <span class="skill-val">88%</span>
+    </div>
+    <div class="bar"><div style="width:88%"></div></div>
 </div>
 
 
 </div>
-
 
 </section>
-
-
-
-
 
 
 
 <section id="projects" class="section reveal">
 
-
-<h2>
-Projects
-</h2>
-
+<p class="eyebrow">// projects</p>
+<h2>Selected Work</h2>
 
 <div class="projects">
 
 
-
 <div class="project-card" onclick="openProject('Military System')">
-
-<img src="images/military.png">
-
-<div>
-
-<h3>
-Military System
-</h3>
-
-<p>
-Security, teams, ranks and administration systems.
-</p>
-
+    <div class="project-img">
+        <img src="images/military.png" alt="Military System">
+    </div>
+    <div class="project-info">
+        <span class="project-tag">SYSTEM</span>
+        <h3>Military System</h3>
+        <p>Security, teams, ranks and administration systems.</p>
+    </div>
 </div>
-
-</div>
-
-
-
-
-
 
 
 <div class="project-card" onclick="openProject('Simulator Framework')">
-
-
-<img src="images/simulator.png">
-
-
-<div>
-
-<h3>
-Simulator Framework
-</h3>
-
-<p>
-Coins, upgrades, shops and saving systems.
-</p>
-
+    <div class="project-img">
+        <img src="images/simulator.png" alt="Simulator Framework">
+    </div>
+    <div class="project-info">
+        <span class="project-tag">FRAMEWORK</span>
+        <h3>Simulator Framework</h3>
+        <p>Coins, upgrades, shops and saving systems.</p>
+    </div>
 </div>
-
-
-</div>
-
-
-
-
-
-
 
 
 <div class="project-card" onclick="openProject('UI System')">
-
-
-<img src="images/ui.png">
-
-
-<div>
-
-<h3>
-Advanced UI System
-</h3>
-
-
-<p>
-Modern interfaces and animations.
-</p>
-
-
+    <div class="project-img">
+        <img src="images/ui.png" alt="Advanced UI System">
+    </div>
+    <div class="project-info">
+        <span class="project-tag">INTERFACE</span>
+        <h3>Advanced UI System</h3>
+        <p>Modern interfaces and animations.</p>
+    </div>
 </div>
 
 
 </div>
-
-
-
-</div>
-
 
 </section>
-
-
-
-
 
 
 
 <div id="popup">
 
-
 <div class="popup-content">
 
-<h2 id="popup-title"></h2>
+    <div class="popup-head">
+        <span id="popup-tag" class="project-tag"></span>
+        <button class="popup-close" onclick="closeProject()" aria-label="Close">&times;</button>
+    </div>
 
-<p id="popup-description"></p>
-
-
-<button onclick="closeProject()">
-Close
-</button>
-
+    <h2 id="popup-title"></h2>
+    <p id="popup-description"></p>
 
 </div>
 
-
 </div>
-
-
-
-
-
 
 
 
 <section id="contact" class="section reveal">
 
-
-<h2>
-Contact
-</h2>
-
+<p class="eyebrow">// contact</p>
+<h2>Let's Build Something</h2>
 
 <div class="contact-card">
 
+    <a class="contact-row" href="https://www.roblox.com/users/profile" target="_blank" rel="noopener">
+        <span class="contact-label">Roblox</span>
+        <span class="contact-value">SuperDaan0608</span>
+    </a>
 
-<p>
-Roblox:
-<br>
-<b>SuperDaan0608</b>
-</p>
+    <a class="contact-row" href="#">
+        <span class="contact-label">Discord</span>
+        <span class="contact-value">superdaan0608</span>
+    </a>
 
-
-
-<p>
-Discord:
-<br>
-<b>superdaan0608</b>
-</p>
-
-
-
-<p>
-Business Email:
-<br>
-<b>superdaan0608@gmail.com</b>
-</p>
-
+    <a class="contact-row" href="mailto:superdaan0608@gmail.com">
+        <span class="contact-label">Business Email</span>
+        <span class="contact-value">superdaan0608@gmail.com</span>
+    </a>
 
 </div>
-
 
 </section>
 
 
 
-
-
-
 <footer>
-
-© 2026 SuperDaan0608
-
+    <span>© 2026 SuperDaan0608</span>
+    <span class="footer-dot">·</span>
+    <span>Built with Luau &amp; late nights</span>
 </footer>
-
-
 
 
 
