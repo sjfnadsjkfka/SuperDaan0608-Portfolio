@@ -2,107 +2,194 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SuperDaan0608 | Roblox Developer</title>
+<title>SuperDaan0608 | Roblox Developer</title>
 
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Model Viewer -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<link rel="stylesheet" href="style.css">
 
 </head>
-
 
 <body>
 
 
+<nav>
+    <h2>SuperDaan0608</h2>
+
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+
+
 <section class="hero">
 
-    <div class="text">
+<div class="hero-text">
 
-        <h1>
-            SuperDaan0608
-        </h1>
-
-        <h2>
-            Roblox Developer
-        </h2>
-
-        <p>
-            Creating professional Roblox experiences
-            using Luau scripting, UI design and custom systems.
-        </p>
-
-        <button>
-            View Projects
-        </button>
-
-    </div>
-
-
-    <div class="model">
-
-        <model-viewer
-            src="models/avatar.glb"
-            camera-controls
-            auto-rotate
-            shadow-intensity="1"
-            exposure="1"
-            environment-image="neutral">
-
-        </model-viewer>
-
-    </div>
-
-
-</section>
-
-
-
-<section class="about">
+<h1>
+Roblox Developer
+</h1>
 
 <h2>
-About Me
+SuperDaan0608
 </h2>
 
 <p>
-Hello! I'm Daan, also known as SuperDaan0608.
-I create Roblox systems and enjoy building
-optimized and unique experiences.
+Creating professional Roblox experiences
+with Luau scripting, UI systems and gameplay mechanics.
 </p>
+
+
+<button onclick="scrollProjects()">
+View Projects
+</button>
+
+
+</div>
+
+
+<div class="cube">
+
+<div></div>
+
+</div>
 
 
 </section>
 
 
 
-<section class="skills">
 
-<h2>
-Skills
-</h2>
+<section id="about" class="hidden">
+
+<h2>About Me</h2>
+
+<p>
+Hello! I'm Daan, also known as SuperDaan0608.
+I specialize in Roblox development and creating
+custom systems for games.
+</p>
+
+</section>
+
+
+
+
+
+<section id="skills" class="hidden">
+
+<h2>Skills</h2>
+
 
 <div class="cards">
 
-<div>
-Luau Scripting
-</div>
 
 <div>
-UI Development
+<h3>Luau</h3>
+<p>Advanced Roblox scripting</p>
 </div>
+
 
 <div>
-DataStore Systems
+<h3>UI Design</h3>
+<p>Modern interfaces and animations</p>
 </div>
+
 
 <div>
-Game Systems
+<h3>Systems</h3>
+<p>DataStores, shops and gameplay systems</p>
 </div>
 
+
+<div>
+<h3>Optimization</h3>
+<p>Clean and efficient code</p>
 </div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<section id="projects" class="hidden">
+
+<h2>Projects</h2>
+
+
+<div class="cards">
+
+
+<div class="project">
+
+<h3>Military System</h3>
+
+<p>
+Team management, checkpoints,
+security systems and admin tools.
+</p>
+
+</div>
+
+
+
+<div class="project">
+
+<h3>Simulator Framework</h3>
+
+<p>
+Coins, upgrades, shops,
+leaderboards and saving.
+</p>
+
+</div>
+
+
+
+
+<div class="project">
+
+<h3>Advanced UI System</h3>
+
+<p>
+Animated menus,
+notifications and interfaces.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="contact" class="hidden">
+
+
+<h2>Contact</h2>
+
+<p>
+Roblox:
+<br>
+<b>SuperDaan0608</b>
+</p>
 
 
 </section>
@@ -116,6 +203,9 @@ Game Systems
 </footer>
 
 
-</body>
 
+<script src="script.js"></script>
+
+
+</body>
 </html>
