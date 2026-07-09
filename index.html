@@ -29,6 +29,8 @@
 
 <div class="grid-overlay"></div>
 
+<div class="scroll-progress"><div class="scroll-progress-bar"></div></div>
+
 
 <nav>
 
@@ -67,47 +69,47 @@
 
 <div class="hero-content">
 
-<p class="small-title">
+<p class="small-title hero-in" style="--d:0">
     <span class="status-dot"></span>
     AVAILABLE FOR COMMISSIONS
 </p>
 
 
-<h1>
+<h1 class="hero-in" style="--d:1">
 Building
 <span class="highlight">production-grade</span>
 Roblox systems
 </h1>
 
 
-<p class="description">
+<p class="description hero-in" style="--d:2">
 I'm Daan — a Luau developer focused on the parts players never
 see but always feel: clean architecture, fast UI, and systems
 built to survive a live server.
 </p>
 
 
-<div class="terminal">
+<div class="terminal hero-in" style="--d:3">
     <div class="terminal-bar">
         <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
         <span class="terminal-title">init.server.luau</span>
     </div>
     <div class="terminal-body">
-        <p><span class="tok-kw">local</span> <span class="tok-var">Player</span> = <span class="tok-fn">game</span>:<span class="tok-fn">GetService</span>(<span class="tok-str">"Players"</span>)</p>
-        <p><span class="tok-kw">local</span> <span class="tok-var">Data</span> = <span class="tok-var">Framework</span>.<span class="tok-fn">LoadProfile</span>(<span class="tok-var">Player</span>)</p>
-        <p class="tok-comment">-- systems online. ready to ship.<span class="cursor-block"></span></p>
+        <p class="type-line" style="--tl:32"><span class="tok-kw">local</span> <span class="tok-var">Player</span> = <span class="tok-fn">game</span>:<span class="tok-fn">GetService</span>(<span class="tok-str">"Players"</span>)</p>
+        <p class="type-line" style="--tl:38; --delay:1.6s"><span class="tok-kw">local</span> <span class="tok-var">Data</span> = <span class="tok-var">Framework</span>.<span class="tok-fn">LoadProfile</span>(<span class="tok-var">Player</span>)</p>
+        <p class="tok-comment type-line" style="--tl:34; --delay:3.2s">-- systems online. ready to ship.<span class="cursor-block"></span></p>
     </div>
 </div>
 
 
-<div class="buttons">
+<div class="buttons hero-in" style="--d:4">
 
-<button onclick="scrollProjects()">
+<button class="magnetic" onclick="scrollProjects()">
     View Projects
 </button>
 
 
-<button class="secondary" onclick="scrollContact()">
+<button class="secondary magnetic" onclick="scrollContact()">
     Contact Me
 </button>
 
@@ -118,7 +120,7 @@ built to survive a live server.
 
 
 
-<div class="model-box">
+<div class="model-box hero-in" style="--d:2">
 
 <model-viewer
     src="models/avatar.glb"
@@ -141,17 +143,17 @@ built to survive a live server.
 <section id="stats" class="stats reveal">
 
 <div>
-    <h2>15<span class="plus">+</span></h2>
+    <h2 data-count="15" data-suffix="+">0</h2>
     <p>Projects Shipped</p>
 </div>
 
 <div>
-    <h2>3<span class="plus">+</span></h2>
+    <h2 data-count="3" data-suffix="+">0</h2>
     <p>Years Developing</p>
 </div>
 
 <div>
-    <h2>100<span class="plus">%</span></h2>
+    <h2 data-count="100" data-suffix="%">0</h2>
     <p>Luau, No Shortcuts</p>
 </div>
 
@@ -243,7 +245,7 @@ built to survive a live server.
 <div class="projects">
 
 
-<div class="project-card" onclick="openProject('Military System')">
+<div class="project-card tilt-card" onclick="openProject('Military System')">
     <div class="project-img">
         <img src="images/military.png" alt="Military System">
     </div>
@@ -255,7 +257,7 @@ built to survive a live server.
 </div>
 
 
-<div class="project-card" onclick="openProject('Simulator Framework')">
+<div class="project-card tilt-card" onclick="openProject('Simulator Framework')">
     <div class="project-img">
         <img src="images/simulator.png" alt="Simulator Framework">
     </div>
@@ -267,7 +269,7 @@ built to survive a live server.
 </div>
 
 
-<div class="project-card" onclick="openProject('UI System')">
+<div class="project-card tilt-card" onclick="openProject('UI System')">
     <div class="project-img">
         <img src="images/ui.png" alt="Advanced UI System">
     </div>
@@ -315,10 +317,10 @@ built to survive a live server.
         <span class="contact-value">SuperDaan0608</span>
     </a>
 
-    <a class="contact-row" href="https://www.discord.com/users/1294558616459935766" target="_blank" rel="noopener">
+    <div class="contact-row contact-row-static">
         <span class="contact-label">Discord</span>
         <span class="contact-value">superdaan0608</span>
-    </a>
+    </div>
 
     <a class="contact-row" href="mailto:superdaan0608@gmail.com">
         <span class="contact-label">Business Email</span>
