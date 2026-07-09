@@ -10,7 +10,7 @@
 
 <link rel="stylesheet" href="style.css">
 
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 </head>
 
@@ -18,51 +18,94 @@
 <body>
 
 
+<div class="loader">
+    <div class="loader-circle"></div>
+</div>
+
+
+<div class="cursor"></div>
+
+
+<div class="background">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+</div>
+
+
+
 <nav>
 
-<h2>SuperDaan0608</h2>
+<div class="logo">
+SuperDaan0608
+</div>
 
-<div>
+
+<div class="links">
+
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+
 </div>
 
 </nav>
 
 
 
+
+
 <section class="hero">
 
 
-<div class="hero-text">
-
-<h1>
-Roblox Developer
-</h1>
-
-<h2>
-SuperDaan0608
-</h2>
+<div class="hero-content">
 
 
-<p>
-Creating professional Roblox experiences
-with Luau scripting, UI systems and gameplay mechanics.
+<p class="small-title">
+ROBLOX DEVELOPER
 </p>
 
+
+<h1>
+
+Creating
+<span>professional</span>
+Roblox experiences
+
+</h1>
+
+
+<p class="description">
+
+I build advanced Roblox systems using Luau,
+including gameplay mechanics, UI systems,
+saving systems and custom frameworks.
+
+</p>
+
+
+
+<div class="buttons">
 
 <button onclick="scrollProjects()">
 View Projects
 </button>
 
 
+<button class="secondary" onclick="scrollContact()">
+Contact Me
+</button>
+
+</div>
+
+
 </div>
 
 
 
-<div class="model">
+
+
+<div class="model-box">
 
 
 <model-viewer
@@ -75,7 +118,9 @@ auto-rotate
 
 shadow-intensity="1"
 
-exposure="1">
+exposure="1"
+
+camera-orbit="0deg 75deg 3m">
 
 </model-viewer>
 
@@ -83,6 +128,41 @@ exposure="1">
 </div>
 
 
+</section>
+
+
+
+
+
+
+
+
+<section id="stats" class="stats reveal">
+
+
+<div>
+
+<h2>15+</h2>
+<p>Projects Created</p>
+
+</div>
+
+
+<div>
+
+<h2>3+</h2>
+<p>Years Developing</p>
+
+</div>
+
+
+<div>
+
+<h2>100%</h2>
+<p>Passion</p>
+
+</div>
+
 
 </section>
 
@@ -90,56 +170,23 @@ exposure="1">
 
 
 
-<section id="about" class="hidden">
 
-<h2>About Me</h2>
+
+<section id="about" class="section reveal">
+
+
+<h2>
+About Me
+</h2>
+
 
 <p>
+
 Hello! I'm Daan, also known as SuperDaan0608.
 I specialize in Roblox development and creating
-custom systems using Luau.
+high-quality systems that improve player experiences.
+
 </p>
-
-</section>
-
-
-
-
-
-
-<section id="skills" class="hidden">
-
-<h2>Skills</h2>
-
-
-<div class="cards">
-
-
-<div>
-<h3>Luau</h3>
-<p>Roblox scripting and gameplay systems</p>
-</div>
-
-
-<div>
-<h3>UI Development</h3>
-<p>Modern animated interfaces</p>
-</div>
-
-
-<div>
-<h3>Data Systems</h3>
-<p>Saving, shops and progression</p>
-</div>
-
-
-<div>
-<h3>Optimization</h3>
-<p>Clean and efficient code</p>
-</div>
-
-
-</div>
 
 
 </section>
@@ -151,23 +198,29 @@ custom systems using Luau.
 
 
 
-<section id="projects" class="hidden">
+
+<section id="skills" class="section reveal">
 
 
-<h2>Projects</h2>
+<h2>
+Skills
+</h2>
 
 
-<div class="cards">
+
+<div class="skills">
 
 
+<div class="skill">
 
-<div class="project" onclick="openProject('Military System')">
+<div>
+<span>Luau Scripting</span>
+<span>95%</span>
+</div>
 
-<h3>Military System</h3>
-
-<p>
-Click to view details
-</p>
+<div class="bar">
+<div style="width:95%"></div>
+</div>
 
 </div>
 
@@ -175,13 +228,16 @@ Click to view details
 
 
 
-<div class="project" onclick="openProject('Simulator Framework')">
+<div class="skill">
 
-<h3>Simulator Framework</h3>
+<div>
+<span>UI Development</span>
+<span>90%</span>
+</div>
 
-<p>
-Click to view details
-</p>
+<div class="bar">
+<div style="width:90%"></div>
+</div>
 
 </div>
 
@@ -189,13 +245,132 @@ Click to view details
 
 
 
-<div class="project" onclick="openProject('UI System')">
+<div class="skill">
 
-<h3>Advanced UI System</h3>
+<div>
+<span>Game Systems</span>
+<span>93%</span>
+</div>
+
+<div class="bar">
+<div style="width:93%"></div>
+</div>
+
+</div>
+
+
+
+
+
+<div class="skill">
+
+<div>
+<span>Optimization</span>
+<span>88%</span>
+</div>
+
+<div class="bar">
+<div style="width:88%"></div>
+</div>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section id="projects" class="section reveal">
+
+
+<h2>
+Projects
+</h2>
+
+
+<div class="projects">
+
+
+
+<div class="project-card" onclick="openProject('Military System')">
+
+<img src="images/military.png">
+
+<div>
+
+<h3>
+Military System
+</h3>
 
 <p>
-Click to view details
+Security, teams, ranks and administration systems.
 </p>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="project-card" onclick="openProject('Simulator Framework')">
+
+
+<img src="images/simulator.png">
+
+
+<div>
+
+<h3>
+Simulator Framework
+</h3>
+
+<p>
+Coins, upgrades, shops and saving systems.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="project-card" onclick="openProject('UI System')">
+
+
+<img src="images/ui.png">
+
+
+<div>
+
+<h3>
+Advanced UI System
+</h3>
+
+
+<p>
+Modern interfaces and animations.
+</p>
+
+
+</div>
+
 
 </div>
 
@@ -205,6 +380,7 @@ Click to view details
 
 
 </section>
+
 
 
 
@@ -214,12 +390,11 @@ Click to view details
 <div id="popup">
 
 
-<div class="popup-box">
-
+<div class="popup-content">
 
 <h2 id="popup-title"></h2>
 
-<p id="popup-text"></p>
+<p id="popup-description"></p>
 
 
 <button onclick="closeProject()">
@@ -238,34 +413,46 @@ Close
 
 
 
-<section id="contact" class="hidden">
+
+<section id="contact" class="section reveal">
 
 
-<h2>Contact</h2>
+<h2>
+Contact
+</h2>
+
+
+<div class="contact-card">
 
 
 <p>
-Roblox:
+🎮 Roblox:
 <br>
 <b>SuperDaan0608</b>
 </p>
 
 
+
 <p>
-Discord:
+💬 Discord:
 <br>
 <b>superdaan0608</b>
 </p>
 
 
+
 <p>
-Business Email:
+📧 Business Email:
 <br>
 <b>superdaan0608@gmail.com</b>
 </p>
 
 
+</div>
+
+
 </section>
+
 
 
 
@@ -276,6 +463,8 @@ Business Email:
 © 2026 SuperDaan0608
 
 </footer>
+
+
 
 
 
