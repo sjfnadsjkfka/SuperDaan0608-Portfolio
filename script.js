@@ -1,14 +1,3 @@
-// ================= LOADER =================
-window.addEventListener("load", () => {
-    const loader = document.querySelector(".loader");
-    setTimeout(() => {
-        loader.style.opacity = "0";
-        setTimeout(() => {
-            loader.style.display = "none";
-        }, 500);
-    }, 500);
-});
-
 // ================= SCROLL BUTTONS =================
 function scrollProjects(){
     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
@@ -26,13 +15,12 @@ const revealObserver = new IntersectionObserver((entries) => {
         }
     });
 }, { threshold: 0.15 });
-
 revealElements.forEach(element => revealObserver.observe(element));
 
 // ================= PROJECT DATA =================
 const projects = {
     "Military System": {
-        tag: "SYSTEM",
+        tag: "System",
         html: `
             A complete Roblox military framework.
             <br><br>
@@ -45,7 +33,7 @@ const projects = {
         `
     },
     "Simulator Framework": {
-        tag: "FRAMEWORK",
+        tag: "Framework",
         html: `
             A scalable simulator framework.
             <br><br>
@@ -58,7 +46,7 @@ const projects = {
         `
     },
     "UI System": {
-        tag: "INTERFACE",
+        tag: "Interface",
         html: `
             Modern Roblox interface development.
             <br><br>
@@ -74,18 +62,14 @@ const projects = {
 function openProject(project){
     const data = projects[project];
     if (!data) return;
-
     document.getElementById("popup-title").innerHTML = project;
     document.getElementById("popup-description").innerHTML = data.html;
     document.getElementById("popup-tag").innerHTML = data.tag;
-
     document.getElementById("popup").style.display = "flex";
 }
-
 function closeProject(){
     document.getElementById("popup").style.display = "none";
 }
-
 document.getElementById("popup").addEventListener("click", (e) => {
     if (e.target.id === "popup") closeProject();
 });
@@ -99,24 +83,38 @@ window.addEventListener("scroll", () => {
 // ================= MOBILE MENU =================
 const navToggle = document.querySelector(".nav-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
-
 navToggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("open");
 });
-
 mobileMenu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => mobileMenu.classList.remove("open"));
 });
 
-// ================= 3D MODEL TILT EFFECT =================
-const model = document.querySelector(".model-box");
-if (model) {
-    document.addEventListener("mousemove", (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 10;
-        const y = (e.clientY / window.innerHeight - 0.5) * 10;
-        model.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
+// ================= ANIMATED STAT COUNTERS =================
+const statEls = document.querySelectorAll("[data-count]");
+const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.count, 10);
+            const suffix = el.dataset.suffix || "";
+            let current = 0;
+            const step = Math.max(1, Math.round(target / 40));
+            const tick = () => {
+                current += step;
+                if (current >= target) {
+                    el.textContent = target + suffix;
+                } else {
+                    el.textContent = current + suffix;
+                    requestAnimationFrame(tick);
+                }
+            };
+            tick();
+            statObserver.unobserve(el);
+        }
     });
-}
+}, { threshold: 0.5 });
+statEls.forEach(el => statObserver.observe(el));
 
 // ================= CLOSE POPUP WITH ESC =================
 document.addEventListener("keydown", (e) => {
