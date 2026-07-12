@@ -61,12 +61,6 @@
             <button class="secondary" onclick="scrollContact()">Say hi</button>
         </div>
     </div>
-
-    <div class="hero-art">
-        <div class="art-card">
-            <span class="art-emoji">🎮</span>
-        </div>
-    </div>
 </section>
 
 
@@ -137,33 +131,8 @@
     <p class="eyebrow">Projects</p>
     <h2>A few things I've made</h2>
 
-    <div class="projects">
-        <div class="project-card" onclick="openProject('Military System')">
-            <div class="project-img"><img src="images/military.png" alt="Military System"></div>
-            <div class="project-info">
-                <span class="project-tag">System</span>
-                <h3>Military System</h3>
-                <p>Security, teams, ranks and admin tools.</p>
-            </div>
-        </div>
-
-        <div class="project-card" onclick="openProject('Simulator Framework')">
-            <div class="project-img"><img src="images/simulator.png" alt="Simulator Framework"></div>
-            <div class="project-info">
-                <span class="project-tag">Framework</span>
-                <h3>Simulator Framework</h3>
-                <p>Coins, upgrades, shops and saving.</p>
-            </div>
-        </div>
-
-        <div class="project-card" onclick="openProject('UI System')">
-            <div class="project-img"><img src="images/ui.png" alt="Advanced UI System"></div>
-            <div class="project-info">
-                <span class="project-tag">Interface</span>
-                <h3>Advanced UI System</h3>
-                <p>Modern interfaces and smooth animations.</p>
-            </div>
-        </div>
+    <div class="projects" id="projects-list">
+        <!-- Project cards are generated automatically from the PROJECTS list in script.js -->
     </div>
 </section>
 
@@ -175,6 +144,7 @@
             <button class="popup-close" onclick="closeProject()" aria-label="Close">&times;</button>
         </div>
         <h2 id="popup-title"></h2>
+        <div id="popup-video" class="popup-video"></div>
         <p id="popup-description"></p>
     </div>
 </div>
