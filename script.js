@@ -47,19 +47,19 @@ const PROJECTS = [
         `
     },
     {
-        image: "simulator.png",
-        youtube: "",
-        name: "Simulator Framework",
-        tag: "Framework",
+        image: "Schermafbeelding 2026-07-12 204454.png",
+        youtube: "https://youtu.be/quY3q1l9-h8",
+        name: "NPC order systwm",
+        tag: "system",
         description: `
-            A scalable simulator framework.
+            A fully functional NPC order system
             <br><br>
             Features:
-            <br>• Coin systems
-            <br>• Upgrade systems
-            <br>• Shops
-            <br>• Leaderboards
-            <br>• DataStore saving
+            <br>• Angry/patient NPCs
+            <br>• Clean UI
+            <br>• Easy to use
+            <br>• Clear code
+            <br>• Patients timer
         `
     },
     {
