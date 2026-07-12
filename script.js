@@ -49,7 +49,7 @@ const PROJECTS = [
     {
         image: "Schermafbeelding 2026-07-12 204454.png",
         youtube: "https://youtu.be/quY3q1l9-h8",
-        name: "NPC order systwm",
+        name: "NPC order system",
         tag: "system",
         description: `
             A fully functional NPC order system
@@ -63,17 +63,18 @@ const PROJECTS = [
         `
     },
     {
-        image: "ui.png",
-        youtube: "",
-        name: "Advanced UI System",
-        tag: "Interface",
+        image: "Schermafbeelding 2026-07-12 210658.png",
+        youtube: "https://youtu.be/BxerA-1viOQ",
+        name: "Advanced admin system",
+        tag: "Interface/system",
         description: `
-            Modern Roblox interface development.
+            Modern Roblox admin system
             <br><br>
             Features:
             <br>• Animated menus
             <br>• Notifications
             <br>• Smooth transitions
+            <br>• Every command you need
             <br>• Responsive layouts
         `
     }
