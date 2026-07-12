@@ -31,9 +31,9 @@ revealElements.forEach(element => revealObserver.observe(element));
 // =====================================================
 const PROJECTS = [
     {
-        image: "military.png",
+        image: "Schermafbeelding 2026-07-12 114113.png",
         youtube: "",
-        name: "Military System",
+        name: "Coffee Machine",
         tag: "System",
         description: `
             A complete Roblox military framework.
